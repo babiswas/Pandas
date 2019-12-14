@@ -1,0 +1,25 @@
+import pandas as pd
+ufo=pd.read_csv('filename')
+ufo.tail()
+#Nan is not a number
+#Missing value
+ufo.isnull().tail()
+ufo.notnull.tail()
+ufo.isnull().sum(axis=0)
+ufo[ufo.City.isnull()]
+ufo.shape
+ufo.dropna(how='any').shape #inplace is False by default
+ufo.shape
+ufo.dropna(how='all').shape
+ufo.drona(subset=['City','Shape Reported'],how='all/any').shape
+ufo['Shape Reported'].value_counts(dropna=False)
+#How to fill missing values
+
+ufo['Shape Reported'].value_counts(dropna=False)
+ufo['Shape Reportrd'].fillna(value='VARIOUS',inplace=True)
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+import pandas as pd
+drinks=pd.read_csv("filename")
+drinks.head()
+drinks.index#Row labels
+drinks.columns
+drinks.shape
+pd.read_table('filename',header=None,sep='|').head()
+drinks.loc[23,'beer_servings']
+drinks.set_index('country',inplace=True)
+drinks.head()
+drinks.index
+drinks.columns
+drinks.shape
+drinks['Brazil','beer_servings']
+drinks.index.name='country'
+drinks.reset_index(inplace=True)
+drinks.head()
+
+
+
+
