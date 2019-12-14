@@ -1,0 +1,20 @@
+import pandas as pd
+m=pd.read_csv('./chipotle.csv')
+m.columns
+m['item_name']
+m.describe()
+m.describe(include=['object'])
+m.head()
+m['order_id'].dtype  #int64
+m['quantity'].dtype  #object
+m['item_name'].dtype #object
+m['item_price'].min()
+m['item_price'].max()
+m['choice_description'].describe()
+m['item_price'].describe()
+m['choice_description'].unique()
+n['quantity'].unique()
+n[n['quantity']==15]
+n[n['quantity']==1]['item_price'].unique()
+
+
