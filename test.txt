@@ -1,0 +1,98 @@
+#How to sort the data in pandas?
+
+import pandas as pd
+movies=pd.read_csv('filename')
+movies.head()
+#How to sort a seris?
+movies['title'].sort_values(ascending=False)
+movies.sort_values('title')
+movies.sort_values('duration',ascending=False)
+movies.sort_values(['content_rating','duration'],ascending=False)
+
+
+#How do I filter rows on the basis of filter column values?
+import pandas as pd
+movies=pd.read_csv('filename')
+movies.head()
+movies.shape
+booleans=[]
+for length in movies.duration:
+   if length>=200:
+       booleans.append(True)
+   else:
+       booleans.append(False)
+booleans[0:5]
+len(booleans)
+is_long=pd.Series(booleans)
+is_long.head()
+movies[is_long]
+is_long=movies.duration>=200
+movies[is_long].genre
+
+#How to apply multiple filter criteria in pandas?
+import pandas as pd
+movies=pd.read_csv('filename')
+movies.head()
+movies[(movies.duration>=200) & (movies.genre=="Drama")]
+movies[(movies.duration>=200)|(movies.genre=="Drama")]
+movies[movies.genre.isin(['Crime','Drama','Action'])]
+
+
+import pandas as pd
+movies=pd.read_csv('filename')
+movies.head()
+movies.describe()
+movies.shape
+movies.dtypes
+movies.describe(include=['object'])
+
+
+#How to rename columns in pandas?
+import pandas as pd
+ufo=pd.read_csv("filename")
+ufo.head()
+ufo.columns
+ufo.rename(columns={'Colors Reported':'Colors_Reported',"Shape reported":'Shape_Reported'},inplace=True)
+
+
+ufo=pd.read_csv('filename',names=ufo_cols,header=0)
+ufo.columns=ufo.columns.str.replace(' ','_')
+
+
+#Remove the columns in pandas datframe?
+import pandas as pd
+ufo=pd.read_csv('filename')
+ufo.head()
+ufo.shape
+ufo.drop('Colors Reported',axis=1,inplace=True)
+ufo.head()
+ufo.drop(['City','State'],axis=1,inplace=True)
+ufo.head()
+ufo.drop([0,1],axis=0,inplace=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
