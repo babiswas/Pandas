@@ -1,0 +1,20 @@
+#How do I explore pandas series?
+
+import pandas as pd
+movies=pd.read_csv('filename')
+movies.head()
+movies.dtypes
+movies.genre.describe()
+movies.genre.value_counts()
+#How many times it appear in the series?
+movies.genre.value_counts(normalize=True).head()
+#provide percentages.
+movies.genre.unique()
+movies.genre.nunique()#The number of unique values
+
+pd.crosstab(movies.genre,movies.content_rating)
+movies.duration.describe()
+movies.duration.mean()
+movies.duration.value_counts()
+
+
