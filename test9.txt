@@ -1,0 +1,16 @@
+#When to use the groupby method
+import pandas as pd
+drinks=pd.read_csv('filename')
+drinks.head()
+drinks.beer_servings.mean()
+drinks.groupby('continent').beer_servings.mean()
+drinks[drinks.continent=='Africa'].beer_servings.mean()
+drinks[drinks.continent=='Europe'].beer_servings.mean()
+drinks.groupby('continent').beer_servings.min()
+drinks.groupby('continent').beer_servings.min()
+drinks.groupby('continent').beer_servings.agg(['count','mean','max','min'])
+drinks.groupby('continent').mean()
+
+
+
+
