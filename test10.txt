@@ -1,0 +1,25 @@
+import pandas as pd
+ufo=pd.read_csv("filename")
+ufo.tail()#pandas frame missing value as NAN
+ufo.isnull().tail()
+ufo.notnull.tail()
+ufo.isnull().sum()#No of missing values in each of the columns
+pd.Series([True,False,True]).sum()
+#2
+ufo[ufo.City.isnull()]
+#What should we do to missing values
+
+ufo.shape
+ufo.dropna(how='any',inplace=False).shape
+ufo.dropna(how='all').shape
+ufo.dropna(subset=['City','Shape Reported'],how='any').shape
+ufo.dropna(subset=['City','Shape Reported'],how='all').shape
+ufo['Shape Reported'].value_counts(dropna=False)
+ufo['Shape Reported'].fillna(value='VARIOUS',inplace=True)
+
+
+
+
+
+
+
