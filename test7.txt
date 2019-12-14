@@ -1,0 +1,23 @@
+#How can I change the datatype of the pandas columns?
+import pandas as pd
+drinks=pd.read_csv('filename')
+drinks.head()
+drinks.dtypes
+drinks.beer_servings.astype(float)
+drinks.dtypes
+drinks=pd.read_csv('filename',dtype={'beer_servings':float})
+drinks.dtypes
+orders=pd.read_table('filename')
+orders.dtypes
+orders.item_price.str.replace('$','').astype(float).mean()
+orders.item_name.str.contains('Chicken').head()
+orders=pd.read_table('filename')
+orders.head()
+orders.dtypes
+orders.item_price.str.replace('$','').astype(float).mean()
+orders.item_name.str.contains('chicken').head()
+orders.item_name.str.contains('chicken').astype(int).head()
+
+
+
+
