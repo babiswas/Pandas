@@ -1,0 +1,5 @@
+import pandas as pd
+orders=pd.read_table('filename')
+orders.head()
+orders.item_name.str.upper()
+orders[orders.item_name.str.contains('Chicken')]
