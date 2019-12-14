@@ -1,0 +1,11 @@
+import pandas as pd
+drinks=pd.read_csv('filename')
+drinks.head()
+drinks.drop('continent',axis=1).head()
+#axis=1 to drop column
+#axis=0 for dropping row
+drinks.drop(2,axis=0).head()
+drinks.mean(axis=0)#represents the mean of the column
+#This will give the mean of the numeric column
+
+
